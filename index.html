@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UX Diagram Library</title>
+  <meta
+    name="description"
+    content="A personal reference for research diagrams, maps, and visualizations used in HCI and UX practice."
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top navigation -->
+  <nav class="site-nav">
+    <a class="site-nav__name" href="index.html">UX Diagram Library</a>
+    <a
+      class="site-nav__credit"
+      href="https://therichux.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      >By Richa Sharma · therichux.com</a
+    >
+  </nav>
+
+  <!-- Page header -->
+  <header class="page-header">
+    <h1 class="page-header__title">UX Diagram Library</h1>
+    <p class="page-header__lead">
+      A personal reference for research diagrams, maps, and visualizations used
+      in HCI and UX practice.
+    </p>
+    <input
+      type="search"
+      class="search-input"
+      placeholder="Search diagrams…"
+      aria-label="Search diagrams"
+    />
+  </header>
+
+  <!-- Filters -->
+  <section class="filters" aria-label="Filters">
+    <div class="filter-row" data-filter="category">
+      <span class="filter-row__label">Category:</span>
+      <button class="filter-btn is-active" data-value="all">All</button>
+      <button class="filter-btn" data-value="research-synthesis">
+        Research synthesis
+      </button>
+      <button class="filter-btn" data-value="user-understanding">
+        User understanding
+      </button>
+      <button class="filter-btn" data-value="journey-experience">
+        Journey &amp; experience
+      </button>
+      <button class="filter-btn" data-value="quantitative">Quantitative</button>
+      <button class="filter-btn" data-value="system-structure">
+        System &amp; structure
+      </button>
+      <button class="filter-btn" data-value="problem-framing">
+        Problem framing
+      </button>
+    </div>
+
+    <div class="filter-row" data-filter="type">
+      <span class="filter-row__label">Type:</span>
+      <button class="filter-btn is-active" data-value="all">All types</button>
+      <button class="filter-btn" data-value="core">Core</button>
+      <button class="filter-btn" data-value="specialized">Specialized</button>
+      <button class="filter-btn" data-value="quantitative">Quantitative</button>
+      <button class="filter-btn" data-value="process">Process</button>
+    </div>
+  </section>
+
+  <!-- Result count -->
+  <p class="result-count">Showing 0 diagrams</p>
+
+  <!-- Diagram grid (cards added in Phase 2) -->
+  <main class="diagram-grid" aria-label="Diagrams">
+    <!-- Phase 2: diagram cards go here -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    UX Diagram Library · Built by Richa Sharma · therichux.com
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
