@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bar / lollipop chart — UX Diagram Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="detail-page">
+
+  <nav class="top-nav">
+    <a href="../index.html" class="nav-back">← Back to library</a>
+    <a href="https://therichux.com" class="nav-byline" target="_blank" rel="noopener">By Richa Sharma · therichux.com</a>
+  </nav>
+
+  <main class="detail-main">
+
+    <div class="detail-top">
+      <div class="detail-illustration">
+        <img src="../images/thumbs/bar-lollipop-chart.svg" alt="Bar / lollipop chart illustration" onerror="this.style.display='none'">
+        <div class="illustration-placeholder" style="background: #F2F0E8;">Bar / lollipop chart</div>
+      </div>
+
+      <aside class="detail-meta">
+        <div class="meta-group">
+          <span class="meta-label">FAMILY</span>
+          <span class="meta-value">Chart</span>
+        </div>
+        <div class="meta-group">
+          <span class="meta-label">FUNCTION</span>
+          <div class="meta-tags">
+            <span class="fn-tag">Comparison</span>
+            <span class="fn-tag">Distribution</span>
+          </div>
+        </div>
+        <div class="meta-group">
+          <span class="meta-label">TYPE</span>
+          <span class="badge badge-quantitative">Quantitative</span>
+        </div>
+        <div class="meta-group">
+          <span class="meta-label">RELATED DIAGRAMS</span>
+          <div class="related-links">
+            <a href="radar-spider-chart.html">Radar / spider chart</a>
+            <a href="bubble-dot-matrix.html">Bubble / dot matrix</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="detail-content">
+      <h1>Bar / lollipop chart</h1>
+
+      <section class="content-section">
+        <h2>About</h2>
+        <p>A bar chart compares a measured value across discrete categories using rectangles whose length encodes magnitude. A lollipop chart is a lighter variant — a thin line topped with a dot — that conveys the same comparison with far less ink, which keeps long lists of categories readable. In UX work, both are the everyday workhorses for presenting survey frequencies, Likert-scale distributions, task-completion rates, and ranked feature preferences. Their strength is honesty: length maps directly to value, and a baseline of zero makes differences impossible to misread.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>When to use</h2>
+        <p>Use a bar or lollipop chart whenever you are comparing a single quantitative value across a set of named categories, or ranking items from most to least. The lollipop form is preferable when you have many categories and the solid bars would feel visually heavy or moiré-like.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>When not to use</h2>
+        <p>Avoid bars for part-to-whole relationships over continuous time, or when only two or three values are involved and a single sentence would communicate them faster. Never truncate the baseline above zero — doing so exaggerates differences and undermines the chart&#x27;s main virtue.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>References</h2>
+        <div class="ref-links">
+          <a class="ref-link" href="https://www.data-to-viz.com/graph/lollipop.html" target="_blank" rel="noopener">from Data to Viz — Lollipop ↗</a>
+          <a class="ref-link" href="https://www.datylon.com/blog/bar-chart-guide" target="_blank" rel="noopener">Datylon — Bar Chart Guide ↗</a>
+        </div>
+      </section>
+
+      <section class="content-section examples-section">
+        <h2>Examples</h2>
+        <p class="examples-note">Click any example to view full size and visit the original source.</p>
+        <div class="examples-grid">
+          <figure class="example-item">
+            <img class="example-img"
+                 src="../images/examples/bar-lollipop-chart/01.jpg"
+                 alt="from Data to Viz example contrasting a dense bar chart with its lighter lollipop equivalent"
+                 data-source="https://www.data-to-viz.com/graph/lollipop.html"
+                 data-caption="from Data to Viz example contrasting a dense bar chart with its lighter lollipop equivalent"
+                 loading="lazy"
+                 onerror="this.parentElement.style.display='none'">
+            <figcaption>www.data-to-viz.com</figcaption>
+          </figure>
+          <figure class="example-item">
+            <img class="example-img"
+                 src="../images/examples/bar-lollipop-chart/02.jpg"
+                 alt="Datavizproject lollipop chart ranking survey responses across many categories"
+                 data-source="https://datavizproject.com/data-type/lollipop-chart/"
+                 data-caption="Datavizproject lollipop chart ranking survey responses across many categories"
+                 loading="lazy"
+                 onerror="this.parentElement.style.display='none'">
+            <figcaption>datavizproject.com</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>UX Diagram Library · <a href="https://therichux.com">therichux.com</a></p>
+  </footer>
+
+  <script src="../lightbox.js" defer></script>
+</body>
+</html>

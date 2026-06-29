@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radar / spider chart — UX Diagram Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="detail-page">
+
+  <nav class="top-nav">
+    <a href="../index.html" class="nav-back">← Back to library</a>
+    <a href="https://therichux.com" class="nav-byline" target="_blank" rel="noopener">By Richa Sharma · therichux.com</a>
+  </nav>
+
+  <main class="detail-main">
+
+    <div class="detail-top">
+      <div class="detail-illustration">
+        <img src="../images/thumbs/radar-spider-chart.svg" alt="Radar / spider chart illustration" onerror="this.style.display='none'">
+        <div class="illustration-placeholder" style="background: #F2F0E8;">Radar / spider chart</div>
+      </div>
+
+      <aside class="detail-meta">
+        <div class="meta-group">
+          <span class="meta-label">FAMILY</span>
+          <span class="meta-value">Chart</span>
+        </div>
+        <div class="meta-group">
+          <span class="meta-label">FUNCTION</span>
+          <div class="meta-tags">
+            <span class="fn-tag">Comparison</span>
+            <span class="fn-tag">Evaluation</span>
+          </div>
+        </div>
+        <div class="meta-group">
+          <span class="meta-label">TYPE</span>
+          <span class="badge badge-quantitative">Quantitative</span>
+        </div>
+        <div class="meta-group">
+          <span class="meta-label">RELATED DIAGRAMS</span>
+          <div class="related-links">
+            <a href="bar-lollipop-chart.html">Bar / lollipop chart</a>
+            <a href="kano-model-plot.html">Kano model plot</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="detail-content">
+      <h1>Radar / spider chart</h1>
+
+      <section class="content-section">
+        <h2>About</h2>
+        <p>A radar chart (also called a spider or star chart) plots several quantitative variables on axes that radiate from a shared center, then connects the points into a closed polygon. The shape of that polygon becomes a recognizable profile, letting you compare a small number of entities across many attributes at once — heuristic-evaluation scores, competitive feature coverage, or persona attribute strengths. Its appeal is pattern recognition: a lopsided shape tells a story faster than a table of numbers.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>When to use</h2>
+        <p>Use a radar chart to compare a few items across four to eight comparable dimensions where the overall shape or balance matters more than precise values — for instance contrasting two products&#x27; strengths, or showing where a design scores well and poorly across usability heuristics.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>When not to use</h2>
+        <p>Avoid radar charts when you have many overlapping series (the polygons turn to spaghetti), when readers must extract exact values, or when the axes use non-comparable units. The enclosed area also scales with the square of the values, which can visually exaggerate differences — interpret it with care.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>References</h2>
+        <div class="ref-links">
+          <a class="ref-link" href="https://www.data-to-viz.com/caveat/spider.html" target="_blank" rel="noopener">from Data to Viz — Radar ↗</a>
+          <a class="ref-link" href="https://datavizproject.com/data-type/spider-chart/" target="_blank" rel="noopener">Datavizproject — Spider Chart ↗</a>
+        </div>
+      </section>
+
+      <section class="content-section examples-section">
+        <h2>Examples</h2>
+        <p class="examples-note">Click any example to view full size and visit the original source.</p>
+        <div class="examples-grid">
+          <figure class="example-item">
+            <img class="example-img"
+                 src="../images/examples/radar-spider-chart/01.jpg"
+                 alt="from Data to Viz illustration of how radar-chart area can mislead, with cautions for interpretation"
+                 data-source="https://www.data-to-viz.com/caveat/spider.html"
+                 data-caption="from Data to Viz illustration of how radar-chart area can mislead, with cautions for interpretation"
+                 loading="lazy"
+                 onerror="this.parentElement.style.display='none'">
+            <figcaption>www.data-to-viz.com</figcaption>
+          </figure>
+          <figure class="example-item">
+            <img class="example-img"
+                 src="../images/examples/radar-spider-chart/02.jpg"
+                 alt="Datavizproject spider chart comparing two options across six evaluation dimensions"
+                 data-source="https://datavizproject.com/data-type/spider-chart/"
+                 data-caption="Datavizproject spider chart comparing two options across six evaluation dimensions"
+                 loading="lazy"
+                 onerror="this.parentElement.style.display='none'">
+            <figcaption>datavizproject.com</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>UX Diagram Library · <a href="https://therichux.com">therichux.com</a></p>
+  </footer>
+
+  <script src="../lightbox.js" defer></script>
+</body>
+</html>

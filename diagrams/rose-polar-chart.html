@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rose / polar area chart — UX Diagram Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="detail-page">
+
+  <nav class="top-nav">
+    <a href="../index.html" class="nav-back">← Back to library</a>
+    <a href="https://therichux.com" class="nav-byline" target="_blank" rel="noopener">By Richa Sharma · therichux.com</a>
+  </nav>
+
+  <main class="detail-main">
+
+    <div class="detail-top">
+      <div class="detail-illustration">
+        <img src="../images/thumbs/rose-polar-chart.svg" alt="Rose / polar area chart illustration" onerror="this.style.display='none'">
+        <div class="illustration-placeholder" style="background: #F2F0E8;">Rose / polar area chart</div>
+      </div>
+
+      <aside class="detail-meta">
+        <div class="meta-group">
+          <span class="meta-label">FAMILY</span>
+          <span class="meta-value">Chart</span>
+        </div>
+        <div class="meta-group">
+          <span class="meta-label">FUNCTION</span>
+          <div class="meta-tags">
+            <span class="fn-tag">Comparison</span>
+            <span class="fn-tag">Distribution</span>
+          </div>
+        </div>
+        <div class="meta-group">
+          <span class="meta-label">TYPE</span>
+          <span class="badge badge-specialized">Specialized</span>
+        </div>
+        <div class="meta-group">
+          <span class="meta-label">RELATED DIAGRAMS</span>
+          <div class="related-links">
+            <a href="radar-spider-chart.html">Radar / spider chart</a>
+            <a href="bar-lollipop-chart.html">Bar / lollipop chart</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="detail-content">
+      <h1>Rose / polar area chart</h1>
+
+      <section class="content-section">
+        <h2>About</h2>
+        <p>A rose chart — also called a polar area or Nightingale coxcomb diagram — wraps a series of bars around a circle, with each wedge&#x27;s radius (and therefore area) encoding a value. Made famous by Florence Nightingale&#x27;s mortality diagrams, it suits cyclical data such as months, weekdays, or hours, and directional or multi-part comparisons where the circular form mirrors the structure of what&#x27;s being measured. It is visually striking, which makes it memorable — and, handled carelessly, easy to misread.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>When to use</h2>
+        <p>Use a rose/polar area chart for cyclical or seasonal data, for directional data where angle has meaning, or when a striking, memorable comparative display serves a communication goal better than a plain bar chart.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>When not to use</h2>
+        <p>Avoid it when precise comparison matters: because area grows with the square of the radius, equal-looking wedges can represent very different values, and a straight bar chart will read more accurately. Skip it too for audiences likely to misinterpret circular encodings.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>References</h2>
+        <div class="ref-links">
+          <a class="ref-link" href="https://www.data-to-viz.com/graph/circularbarplot.html" target="_blank" rel="noopener">from Data to Viz — Circular Barplot ↗</a>
+          <a class="ref-link" href="https://en.wikipedia.org/wiki/Pie_chart#Polar_area_diagram" target="_blank" rel="noopener">Wikipedia — Polar area diagram ↗</a>
+        </div>
+      </section>
+
+      <section class="content-section examples-section">
+        <h2>Examples</h2>
+        <p class="examples-note">Click any example to view full size and visit the original source.</p>
+        <div class="examples-grid">
+          <figure class="example-item">
+            <img class="example-img"
+                 src="../images/examples/rose-polar-chart/01.jpg"
+                 alt="from Data to Viz circular barplot showing values wrapped around a polar axis"
+                 data-source="https://www.data-to-viz.com/graph/circularbarplot.html"
+                 data-caption="from Data to Viz circular barplot showing values wrapped around a polar axis"
+                 loading="lazy"
+                 onerror="this.parentElement.style.display='none'">
+            <figcaption>www.data-to-viz.com</figcaption>
+          </figure>
+          <figure class="example-item">
+            <img class="example-img"
+                 src="../images/examples/rose-polar-chart/02.jpg"
+                 alt="Nightingale&#x27;s coxcomb diagram of mortality causes, the historical polar area chart"
+                 data-source="https://en.wikipedia.org/wiki/Pie_chart#Polar_area_diagram"
+                 data-caption="Nightingale&#x27;s coxcomb diagram of mortality causes, the historical polar area chart"
+                 loading="lazy"
+                 onerror="this.parentElement.style.display='none'">
+            <figcaption>en.wikipedia.org</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>UX Diagram Library · <a href="https://therichux.com">therichux.com</a></p>
+  </footer>
+
+  <script src="../lightbox.js" defer></script>
+</body>
+</html>

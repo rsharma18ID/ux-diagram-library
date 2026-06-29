@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cognitive load map — UX Diagram Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body class="detail-page">
+
+  <nav class="top-nav">
+    <a href="../index.html" class="nav-back">← Back to library</a>
+    <a href="https://therichux.com" class="nav-byline" target="_blank" rel="noopener">By Richa Sharma · therichux.com</a>
+  </nav>
+
+  <main class="detail-main">
+
+    <div class="detail-top">
+      <div class="detail-illustration">
+        <img src="../images/thumbs/cognitive-load-map.svg" alt="Cognitive load map illustration" onerror="this.style.display='none'">
+        <div class="illustration-placeholder" style="background: #EEE8F2;">Cognitive load map</div>
+      </div>
+
+      <aside class="detail-meta">
+        <div class="meta-group">
+          <span class="meta-label">FAMILY</span>
+          <span class="meta-value">Diagram</span>
+        </div>
+        <div class="meta-group">
+          <span class="meta-label">FUNCTION</span>
+          <div class="meta-tags">
+            <span class="fn-tag">Analysis</span>
+            <span class="fn-tag">Flow</span>
+          </div>
+        </div>
+        <div class="meta-group">
+          <span class="meta-label">TYPE</span>
+          <span class="badge badge-specialized">Specialized</span>
+        </div>
+        <div class="meta-group">
+          <span class="meta-label">RELATED DIAGRAMS</span>
+          <div class="related-links">
+            <a href="user-journey-map.html">User journey map</a>
+            <a href="mental-model-diagram.html">Mental model diagram</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="detail-content">
+      <h1>Cognitive load map</h1>
+
+      <section class="content-section">
+        <h2>About</h2>
+        <p>A cognitive load map annotates a user flow or task sequence with the mental effort required at each step. Annotations typically use a simple scale — high, medium, low — or a numeric load score. Some versions also distinguish between types of load: intrinsic (complexity of the task itself), extraneous (complexity introduced by poor design), and germane (mental effort spent building understanding). The map reveals where friction is cognitive rather than functional — steps that appear complete but that leave users uncertain, where errors in understanding accumulate before they become visible as errors in behavior.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>When to use</h2>
+        <p>Use a cognitive load map when evaluating complex flows, multi-step forms, or task sequences where user error or abandonment is occurring but the functional path is technically complete. It is particularly useful in domains with inherent complexity — medical, financial, legal — where simplification must be deliberate rather than assumed.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>When not to use</h2>
+        <p>Do not apply cognitive load mapping to simple, low-stakes flows where the effort is obviously low. The method requires either usability testing data or careful task analysis to score load accurately — avoid assigning load scores based on intuition alone.</p>
+      </section>
+
+      <section class="content-section">
+        <h2>References</h2>
+        <div class="ref-links">
+          <a class="ref-link" href="https://www.nngroup.com/articles/minimize-cognitive-load/" target="_blank" rel="noopener">NNg — Minimize Cognitive Load ↗</a>
+          <a class="ref-link" href="https://ixdf.org/literature/article/cognitive-load" target="_blank" rel="noopener">IxDF — Cognitive Load ↗</a>
+        </div>
+      </section>
+
+      <section class="content-section examples-section">
+        <h2>Examples</h2>
+        <p class="examples-note">Click any example to view full size and visit the original source.</p>
+        <div class="examples-grid">
+          <figure class="example-item">
+            <img class="example-img"
+                 src="../images/examples/cognitive-load-map/01.jpg"
+                 alt="NNg example showing cognitive load annotated across a checkout flow with high-load steps identified for redesign"
+                 data-source="https://www.nngroup.com/articles/minimize-cognitive-load/"
+                 data-caption="NNg example showing cognitive load annotated across a checkout flow with high-load steps identified for redesign"
+                 loading="lazy"
+                 onerror="this.parentElement.style.display='none'">
+            <figcaption>www.nngroup.com</figcaption>
+          </figure>
+          <figure class="example-item">
+            <img class="example-img"
+                 src="../images/examples/cognitive-load-map/02.jpg"
+                 alt="Cognitive load map of a medical form completion flow, showing where intrinsic and extraneous load peaks and where errors cluster"
+                 data-source="https://uxdesign.cc"
+                 data-caption="Cognitive load map of a medical form completion flow, showing where intrinsic and extraneous load peaks and where errors cluster"
+                 loading="lazy"
+                 onerror="this.parentElement.style.display='none'">
+            <figcaption>uxdesign.cc</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>UX Diagram Library · <a href="https://therichux.com">therichux.com</a></p>
+  </footer>
+
+  <script src="../lightbox.js" defer></script>
+</body>
+</html>
