@@ -16,6 +16,17 @@
     type: 'all'
   };
 
+  // The home page filter buttons use descriptive slugs, while the cards carry
+  // shorter data-category values. Map button value -> card data-category.
+  var CATEGORY_MAP = {
+    'research-synthesis': 'synthesis',
+    'user-understanding': 'user',
+    'journey-experience': 'journey',
+    'quantitative': 'quant',
+    'system-structure': 'system',
+    'problem-framing': 'framing'
+  };
+
   var searchInput;
   var cards;
   var countEl;
@@ -81,7 +92,8 @@
   function matches(card) {
     // Category
     if (state.category !== 'all') {
-      if (card.getAttribute('data-category') !== state.category) return false;
+      var wanted = CATEGORY_MAP[state.category] || state.category;
+      if (card.getAttribute('data-category') !== wanted) return false;
     }
 
     // Type
@@ -91,7 +103,7 @@
 
     // Search query
     if (state.query) {
-      var name = (card.querySelector('.card__name') || {}).textContent || '';
+      var name = (card.querySelector('h2') || {}).textContent || '';
       var tags = card.getAttribute('data-tags') || '';
       var haystack = (name + ' ' + tags).toLowerCase();
       if (haystack.indexOf(state.query) === -1) return false;
