@@ -19,6 +19,8 @@
   var imgEl;
   var captionEl;
   var sourceEl;
+  var closeBtn;
+  var triggerEl = null; // element that opened the lightbox, for focus return
   var images = [];
   var current = 0;
 
@@ -48,7 +50,7 @@
     var topBar = document.createElement('div');
     topBar.className = 'lightbox-top-bar';
 
-    var closeBtn = document.createElement('button');
+    closeBtn = document.createElement('button');
     closeBtn.type = 'button';
     closeBtn.className = 'lightbox-close';
     closeBtn.textContent = '✕ Close';
@@ -121,26 +123,36 @@
     images.forEach(function (el) {
       if (el.__lbBound) return;
       el.__lbBound = true;
+      // Make the trigger programmatically focusable so we can return focus on close.
+      if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
       el.addEventListener('click', function () {
         // Recompute from the live DOM in case content changed.
         images = toArray(document.querySelectorAll('.example-img'));
-        open(images.indexOf(el));
+        open(images.indexOf(el), el);
       });
     });
   }
 
   // ---- Open / close / navigate ---------------------------------------------
-  function open(index) {
+  function open(index, trigger) {
     if (index < 0 || index >= images.length) return;
     current = index;
+    triggerEl = trigger || images[index] || null;
     render();
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
+    // Move focus into the dialog.
+    closeBtn.focus();
   }
 
   function close() {
     overlay.classList.remove('active');
     document.body.style.overflow = '';
+    // Return focus to the element that opened the lightbox.
+    if (triggerEl && typeof triggerEl.focus === 'function') {
+      triggerEl.focus();
+    }
+    triggerEl = null;
   }
 
   function isOpen() {

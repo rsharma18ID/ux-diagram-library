@@ -30,6 +30,7 @@
   var searchInput;
   var cards;
   var countEl;
+  var filterGroups = {}; // key -> array of buttons
 
   document.addEventListener('DOMContentLoaded', init);
 
@@ -50,6 +51,9 @@
     wireFilterRow('[data-filter="category"]', 'category');
     wireFilterRow('[data-filter="type"]', 'type');
 
+    // Allow deep-linking to a filtered view, e.g. index.html?category=synthesis
+    applyQueryParams();
+
     apply();
   }
 
@@ -60,18 +64,64 @@
     var buttons = Array.prototype.slice.call(
       row.querySelectorAll('.filter-btn')
     );
+    filterGroups[key] = buttons;
 
     buttons.forEach(function (btn) {
+      // Initialise aria-pressed from the current active state.
+      btn.setAttribute(
+        'aria-pressed',
+        btn.classList.contains('is-active') ? 'true' : 'false'
+      );
+
       btn.addEventListener('click', function () {
-        state[key] = btn.getAttribute('data-value') || 'all';
-
-        buttons.forEach(function (b) {
-          b.classList.toggle('is-active', b === btn);
-        });
-
+        activateButton(key, btn);
         apply();
       });
     });
+  }
+
+  // Mark a button active within its group, updating classes + aria-pressed.
+  function activateButton(key, btn) {
+    state[key] = btn.getAttribute('data-value') || 'all';
+
+    (filterGroups[key] || []).forEach(function (b) {
+      var on = b === btn;
+      b.classList.toggle('is-active', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+
+  // Read ?category= and ?type= from the URL and pre-select the matching filters.
+  function applyQueryParams() {
+    var params = new URLSearchParams(window.location.search);
+
+    var cat = params.get('category');
+    if (cat) {
+      var catBtn = findButton('category', function (value) {
+        // Accept either the card value (e.g. "synthesis") or the
+        // descriptive button value (e.g. "research-synthesis").
+        return value === cat || CATEGORY_MAP[value] === cat;
+      });
+      if (catBtn) activateButton('category', catBtn);
+    }
+
+    var type = params.get('type');
+    if (type) {
+      var typeBtn = findButton('type', function (value) {
+        return value === type;
+      });
+      if (typeBtn) activateButton('type', typeBtn);
+    }
+  }
+
+  function findButton(key, predicate) {
+    var buttons = filterGroups[key] || [];
+    for (var i = 0; i < buttons.length; i++) {
+      if (predicate(buttons[i].getAttribute('data-value') || '')) {
+        return buttons[i];
+      }
+    }
+    return null;
   }
 
   function apply() {
