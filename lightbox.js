@@ -2,17 +2,20 @@
    UX Diagram Library — shared lightbox
    ===========================================================================
    Opens when any element with class "example-img" is clicked.
-   Supports: close button, source link, caption, prev/next navigation,
-   click-outside to close, Escape to close, ArrowLeft/ArrowRight to navigate.
+   Features: close button, "View original source" link (hidden when the clicked
+   element has no data-source), caption, prev/next navigation, click-outside to
+   close, Escape to close, and ArrowLeft/ArrowRight to navigate.
 
    Detail pages may call initLightbox() after injecting content; it is also
-   auto-initialised on DOMContentLoaded.
+   auto-initialised on DOMContentLoaded. Visibility is toggled with the
+   "active" class on the overlay (see .lightbox-overlay / .active in style.css).
    =========================================================================== */
 
 (function () {
   'use strict';
 
   var overlay;
+  var container;
   var imgEl;
   var captionEl;
   var sourceEl;
@@ -34,29 +37,44 @@
     if (overlay) return;
 
     overlay = document.createElement('div');
-    overlay.className = 'lightbox';
-    overlay.setAttribute('hidden', '');
+    overlay.className = 'lightbox-overlay';
     overlay.setAttribute('role', 'dialog');
     overlay.setAttribute('aria-modal', 'true');
 
-    var container = document.createElement('div');
-    container.className = 'lightbox__container';
+    container = document.createElement('div');
+    container.className = 'lightbox-container';
+
+    // Top bar: close (left) + source (right)
+    var topBar = document.createElement('div');
+    topBar.className = 'lightbox-top-bar';
 
     var closeBtn = document.createElement('button');
-    closeBtn.className = 'lightbox__close';
     closeBtn.type = 'button';
+    closeBtn.className = 'lightbox-close';
     closeBtn.textContent = '✕ Close';
     closeBtn.addEventListener('click', close);
 
     sourceEl = document.createElement('a');
-    sourceEl.className = 'lightbox__source';
+    sourceEl.className = 'lightbox-source';
     sourceEl.target = '_blank';
     sourceEl.rel = 'noopener noreferrer';
     sourceEl.textContent = 'View original source ↗';
 
+    topBar.appendChild(closeBtn);
+    topBar.appendChild(sourceEl);
+
+    // Image
+    imgEl = document.createElement('img');
+    imgEl.className = 'lightbox-img';
+    imgEl.alt = '';
+
+    // Navigation arrows
+    var arrows = document.createElement('div');
+    arrows.className = 'lightbox-arrows';
+
     var prevBtn = document.createElement('button');
-    prevBtn.className = 'lightbox__arrow lightbox__arrow--prev';
     prevBtn.type = 'button';
+    prevBtn.className = 'lightbox-arrow lightbox-prev';
     prevBtn.setAttribute('aria-label', 'Previous');
     prevBtn.innerHTML = '‹';
     prevBtn.addEventListener('click', function (e) {
@@ -65,8 +83,8 @@
     });
 
     var nextBtn = document.createElement('button');
-    nextBtn.className = 'lightbox__arrow lightbox__arrow--next';
     nextBtn.type = 'button';
+    nextBtn.className = 'lightbox-arrow lightbox-next';
     nextBtn.setAttribute('aria-label', 'Next');
     nextBtn.innerHTML = '›';
     nextBtn.addEventListener('click', function (e) {
@@ -74,18 +92,16 @@
       navigate(1);
     });
 
-    imgEl = document.createElement('img');
-    imgEl.className = 'lightbox__image';
-    imgEl.alt = '';
+    arrows.appendChild(prevBtn);
+    arrows.appendChild(nextBtn);
 
+    // Caption
     captionEl = document.createElement('div');
-    captionEl.className = 'lightbox__caption';
+    captionEl.className = 'lightbox-caption';
 
-    container.appendChild(closeBtn);
-    container.appendChild(sourceEl);
-    container.appendChild(prevBtn);
+    container.appendChild(topBar);
     container.appendChild(imgEl);
-    container.appendChild(nextBtn);
+    container.appendChild(arrows);
     container.appendChild(captionEl);
     overlay.appendChild(container);
 
@@ -93,30 +109,21 @@
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) close();
     });
-    // Clicks on the container background (not the image) also close.
-    container.addEventListener('click', function (e) {
-      if (e.target === container) close();
-    });
 
     document.body.appendChild(overlay);
-
     document.addEventListener('keydown', onKeydown);
   }
 
   // ---- (Re)bind click handlers to all .example-img elements ----------------
   function refreshTargets() {
-    images = Array.prototype.slice.call(
-      document.querySelectorAll('.example-img')
-    );
+    images = toArray(document.querySelectorAll('.example-img'));
 
-    images.forEach(function (el, i) {
+    images.forEach(function (el) {
       if (el.__lbBound) return;
       el.__lbBound = true;
       el.addEventListener('click', function () {
-        // Recompute index from the live list in case DOM changed.
-        images = Array.prototype.slice.call(
-          document.querySelectorAll('.example-img')
-        );
+        // Recompute from the live DOM in case content changed.
+        images = toArray(document.querySelectorAll('.example-img'));
         open(images.indexOf(el));
       });
     });
@@ -127,17 +134,17 @@
     if (index < 0 || index >= images.length) return;
     current = index;
     render();
-    overlay.removeAttribute('hidden');
+    overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
   function close() {
-    overlay.setAttribute('hidden', '');
+    overlay.classList.remove('active');
     document.body.style.overflow = '';
   }
 
   function isOpen() {
-    return overlay && !overlay.hasAttribute('hidden');
+    return overlay && overlay.classList.contains('active');
   }
 
   function navigate(delta) {
@@ -150,8 +157,7 @@
     var el = images[current];
     if (!el) return;
 
-    var fullSrc = el.getAttribute('data-full') || el.getAttribute('src');
-    imgEl.src = fullSrc || '';
+    imgEl.src = el.getAttribute('data-full') || el.getAttribute('src') || '';
     imgEl.alt = el.getAttribute('alt') || '';
 
     var caption = el.getAttribute('data-caption') || '';
@@ -179,5 +185,9 @@
     } else if (e.key === 'ArrowRight') {
       navigate(1);
     }
+  }
+
+  function toArray(nodeList) {
+    return Array.prototype.slice.call(nodeList);
   }
 })();
