@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-98 -77 196 147" font-family="Arial" text-anchor="middle">
+<path fill="none" stroke="#666" d="M-4-53l4-7l4,7m-4-7v114m-4-7l4,7l4-7M-47-7l-7,4l7,4m-7-4h114m-7-4l7,4l-7,4"/>
+<g font-size="11">
+<text y="65">interaction</text>
+<text y="-65">unilateral action</text>
+<text x="-76">players</text>
+<text x="80">world</text>
+</g>
+<text y="-30" x="-50">Killers<tspan x="50">Achievers</tspan></text>
+<text y="32" x="50">Explorers<tspan x="-50">Socializers</tspan></text>
+<text y="-48" x="-50">&#9827;<tspan x="50" fill="#c00" stroke="#c00">&#9830;</tspan></text>
+<text y="48" x="50">&#9824;<tspan x="-50" fill="#c00">&#9829;</tspan></text>
+</svg>
