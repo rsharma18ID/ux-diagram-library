@@ -368,17 +368,21 @@ Goal: replace all illustrative recreations with real open-licensed images (5 sel
 - Competing Values Framework 2×2 quadrant — Wikimedia CC BY-SA 4.0 (Ainurgom 2021) — https://upload.wikimedia.org/wikipedia/commons/c/cf/%E2%80%9CCompeting_Values_Framework%E2%80%9D_edo_%E2%80%9CLehian_dauden_Balioen_Esparrua%E2%80%9D.png
 - Project management iron triangle (time/cost/scope tensions) — Wikimedia public domain (Mapto 2007) — https://upload.wikimedia.org/wikipedia/commons/8/88/Project-triangle-en.svg
 
-## PENDING — 2 diagrams still need top-up
+### behavioral-archetype-map (+4, now 5 open)
+- Rogers' Diffusion of Innovation adopter categories (Innovators→Laggards bell curve) — Wikimedia public domain (Hvassing 2012) — https://upload.wikimedia.org/wikipedia/commons/1/11/Diffusion_of_ideas.svg
+- DISG/DISC behavioral style quadrant (Dominance, Influence, Steadiness, Conscientiousness) — Wikimedia CC BY-SA 3.0 (Bodo Wiska) — https://upload.wikimedia.org/wikipedia/commons/0/07/DISG-Modell.png
+- Gamer archetypes 4-cluster PCA map (Casual/Competitive/Social/Achievement-oriented) — arXiv 2510.10263v1 CC BY 4.0 — https://arxiv.org/html/2510.10263v1/cluster1.png
+- Health information seeker typology (6 archetypes: learners, pragmatists, skeptics, worriers, delegators, adigitals) — JMIR 2019 CC BY 4.0 — https://cdn.ncbi.nlm.nih.gov/pmc/blobs/6d7c/6423500/1579c3f21838/jmir_v21i3e11279_fig2.jpg
 
-Agents hit the session limit / stalled before returning. Current open count in parens:
+## PENDING — 1 diagram still needs top-up
+
 - coded-quote-matrix (0 — need 5) — HARDEST, ARR/HTML-table dominated
-- behavioral-archetype-map (1: Bartle CC0 — need 4)
 
 When resuming: re-launch open-only top-up agents for these 4 (same strict prompt: open license + verified direct image URL only). Best open sources proven this pass: open-access academic figures (PMC/JMIR/Frontiers/BMC/PLOS CC BY), Wikimedia Commons, Flickr CC. If coded-quote-matrix genuinely can't reach 5 open, that's the one to reconsider (allow fewer, or an illustrative recreation).
 
 ## STATUS SUMMARY
-- **23 of 25 top-up diagrams now at 5 open self-hostable images** (0 recreations needed).
+- **24 of 25 top-up diagrams now at 5 open self-hostable images** (0 recreations needed).
 - **5 diagrams were already at 5 open** from the standard pass: radar-spider, rose-polar, swimlane, concept-knowledge-map, longitudinal-timeline.
-- **So 28 of 30 diagrams are fully sourced with 5 real open images.**
-- **2 diagrams pending** re-hunt: coded-quote-matrix, behavioral-archetype-map.
+- **So 29 of 30 diagrams are fully sourced with 5 real open images.**
+- **1 diagram pending** re-hunt: coded-quote-matrix.
 
