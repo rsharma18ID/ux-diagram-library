@@ -570,6 +570,41 @@ img {
   background: #FFFFFF;
 }
 
+/* --- "More examples to explore" (Part B link list) ------------------------- */
+.more-examples {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #E8E4DE;
+}
+
+.more-examples h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6B6760;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.more-examples-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.more-examples-list a {
+  font-size: 14px;
+  color: #C4622D;
+  text-decoration: none;
+}
+
+.more-examples-list a:hover {
+  text-decoration: underline;
+}
+
 /* ===========================================================================
    Lightbox
    =========================================================================== */
