@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1200" height="750" xmlns="http://www.w3.org/2000/svg" font-size="40px" font-family="Liberation Sans,sans-serif" text-anchor="middle" fill="black">
+
+<rect width="1200" height="750" stroke="none" fill="#f8f8f8"/>
+<rect width="800" height="530" x="350" y="100" fill="white"/>
+
+<path stroke="black" stroke-width="0.25" d="
+M350,100 v540
+M430,100 v540
+M510,100 v540
+M590,100 v540
+M670,100 v540
+M750,100 v540
+M830,100 v540
+M910,100 v540
+M990,100 v540
+M1070,100 v540
+M1150,100 v540
+"/>
+
+   <g stroke="white" stroke-width="1">
+
+<!-- Democrat blue -->
+<path transform="translate(0,-30)" fill="#0bf" d="
+M350,244.3 h680 v50 h-680 z
+M350,332.6 h648 v50 h-648 z
+M350,420.9 h616 v50 h-616 z
+M350,509.3 h536 v50 h-536 z
+M350,597.6 h616 v50 h-616 z 
+"/>
+
+<!-- Overall (gray) -->
+<path transform="translate(0,-20)" fill="#bbb" d="
+M350,220.8 h496 v50 h-496 z
+M350,309.1 h496 v50 h-496 z
+M350,397.4 h464 v50 h-464 z
+M350,485.8 h400 v50 h-400 z
+M350,574.1 h464 v50 h-464 z 
+"/>
+
+<!-- Republican red -->
+<path transform="translate(0,-10)" fill="#e22" d="
+M350,197.2 h280 v50 h-280 z
+M350,285.5 h272 v50 h-272 z
+M350,373.8 h224 v50 h-224 z
+M350,462.2 h216 v50 h-216 z
+M350,550.5 h224 v50 h-224 z 
+"/>
+
+   </g>
+
+<path transform="translate(0.5,0)" stroke="white" stroke-width="0.25" d="
+M430,100 v540
+M510,100 v540
+M590,100 v540
+M670,100 v540
+M750,100 v540
+M830,100 v540
+M910,100 v540
+M990,100 v540
+M1070,100 v540
+"/>
+
+<text x="600" y="65" font-size="45px">Survey: Climate change is a major factor in...</text>
+
+<g font-size="35" transform="translate(0,680)">
+<text x="356">0%</text>
+<text x="756">50%</text>
+<text x="1140">100%</text>
+</g>
+
+<g transform="translate(335,-20)" text-anchor="end">
+<text y="248">Extreme heat:</text>
+<text y="337">Drought:</text>
+<text y="425">Severe storms:</text>
+<text y="513">Floods:</text>
+<text y="602">Wildfires:</text> 
+</g>
+
+<text x="500" y="175" fill="#e22">Republicans</text>
+<text x="750" y="188.5" fill="#999">Overall</text>
+<text x="1000" y="202" fill="#0bf">Democrats</text>
+
+<g transform="translate(25,715)" font-size="15" letter-spacing="-0.5" text-anchor="start">
+<text>Question: Among those whose areas have been affected by each:</text>
+<text y="20">"Do you think climate change is a major factor, a minor factor, or not a factor contributing to each of the following in the area where you live?"</text>
+</g>
+
+<!-- Cover edges' grid lines  -->
+<rect width="800" height="530" x="350" y="100" stroke="#888888" stroke-width="1" fill="none"/>
+
+</svg>
+

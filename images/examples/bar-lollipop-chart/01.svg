@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg  width="1200" height="675" xmlns="http://www.w3.org/2000/svg"><!-- rectangles for overall page, and for plot area:  --><rect width="1200" height="675" stroke="none" fill="#f8f8f8"/><rect width="850" height="545" x="300" y="50" stroke="#888888" stroke-width="1" fill="white"/>      <g font-size="40px" font-family="Liberation Sans,sans-serif" text-anchor="middle" fill="black"> <g transform="translate(0,20)">
+<text><tspan x="306" y="635">0%</tspan><tspan x="391" y="635">10</tspan><tspan x="476" y="635">20</tspan><tspan x="561" y="635">30</tspan><tspan x="646" y="635">40</tspan><tspan x="731" y="635">50</tspan><tspan x="816" y="635">60</tspan><tspan x="901" y="635">70</tspan><tspan x="986" y="635">80</tspan><tspan x="1071" y="635">90</tspan><tspan x="1156" y="635">100</tspan></text>  </g><g stroke="black" stroke-width="0.25">
+<path d="M300,50 v555M385,50 v555M470,50 v555M555,50 v555M640,50 v555M725,50 v555M810,50 v555M895,50 v555M980,50 v555M1065,50 v555M1150,50 v555"/>
+</g><g transform="translate(0,0)">
+<text><tspan x="150" y="236.31">Republican:</tspan>
+<tspan x="150" y="304.44">Democrat:</tspan>
+<tspan x="150" y="508.81">Republican:</tspan>
+<tspan x="150" y="576.94">Democrat:</tspan> </text>
+</g>  <g  stroke="white" stroke-width="1"><g fill="#2dbdec"> <path d="M300,193.063 h170 v55.045 h-170 z
+M300,261.188 h688.5 v55.045 h-688.5 z
+M300,465.563 h68.68687 v55.045 h-68.68687 z
+M300,533.688 h472.22222 v55.045 h-472.22222 z "/>
+</g><g fill="lightgray"> <path d="M470,193.063 h450.5 v55.045 h-450.5 z
+M988.5,261.188 h127.5 v55.045 h-127.5 z
+M368.68687,465.563 h300.50505 v55.045 h-300.50505 z
+M772.22222,533.688 h283.33333 v55.045 h-283.33333 z "/>
+</g><g fill="#cb1025"> <path d="M920.5,193.063 h229.5 v55.045 h-229.5 z
+M1116,261.188 h34 v55.045 h-34 z
+M669.19192,465.563 h480.80808 v55.045 h-480.80808 z
+M1055.55555,533.688 h94.44444 v55.045 h-94.44444 z "/>
+</g>   </g><g text-anchor="start" font-size="50"><text x="325" y="170">Gun laws should be... </text><text x="325" y="440">Greater gun ownership brings... </text>
+</g>  <g fill="white">
+<text x="310" y="235" text-anchor="start">Stricter</text>
+<text x="1035" y="235">Less strict</text>
+<text x="650" y="304">Stricter</text>
+<text x="900" y="509">Less crime</text>
+<text x="525" y="577">More crime</text>  </g>      </g></svg>

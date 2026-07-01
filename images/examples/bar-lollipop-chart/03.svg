@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="750" height="1060" xmlns="http://www.w3.org/2000/svg" font-size="40" font-family="Liberation Sans,sans-serif" text-anchor="middle" fill="black">
+
+   <defs>
+
+<linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="0">
+ <stop offset="0%" stop-color="#fee"/>
+ <stop offset="30%" stop-color="#fee"/>
+ <stop offset="100%" stop-color="#efe"/>
+</linearGradient>
+
+<linearGradient id="barsGradient" x1="0" y1="0" x2="0" y2="1">
+ <stop offset="0%" stop-color="#6a6"/>
+ <stop offset="30%" stop-color="#6a6"/>
+ <stop offset="100%" stop-color="#f44"/>
+</linearGradient>
+
+   </defs>
+
+<rect width="750" height="1060" stroke="none" fill="#f8f8f8"/>
+<rect width="600" height="840" x="100" y="100" fill="url(#bgGradient)"/>
+
+<path stroke="black" stroke-width="0.5" d="
+M100,100 v850
+M160,100 v850
+M220,100 v850
+M280,100 v850
+M340,100 v850
+M400,100 v850
+M460,100 v850
+M520,100 v850
+M580,100 v850
+M640,100 v850
+M700,100 v850
+"/>
+
+<path fill="url(#barsGradient)" d="
+M100,102 h534 v38 h-534 z
+M100,144 h534 v38 h-534 z
+M100,186 h510 v38 h-510 z
+M100,228 h498 v38 h-498 z
+M100,270 h486 v38 h-486 z
+M100,312 h480 v38 h-480 z
+M100,354 h474 v38 h-474 z
+M100,396 h468 v38 h-468 z
+M100,438 h456 v38 h-456 z
+M100,480 h456 v38 h-456 z 
+M100,522 h450 v38 h-450 z
+M100,564 h432 v38 h-432 z
+M100,606 h426 v38 h-426 z
+M100,648 h414 v38 h-414 z
+M100,690 h390 v38 h-390 z
+M100,732 h384 v38 h-384 z
+M100,774 h330 v38 h-330 z
+M100,816 h324 v38 h-324 z
+M100,858 h258 v38 h-258 z
+M100,900 h96 v38 h-96 z 
+"/>
+
+<path stroke="white" stroke-width="0.5" transform="translate(0.5,0)" d="
+M400,100 v850
+M460,100 v850
+M520,100 v850
+M580,100 v850
+M640,100 v850
+"/>
+
+<text x="15" y="60" text-anchor="start" font-weight="bold">Survey:</text>
+
+<g transform="translate(450,40)" font-style="italic">
+<text>"I support quick transition</text>
+<text y="40">away from fossil fuels."</text>
+</g>
+
+<g transform="translate(25,-3)" fill="black" font-size="35">
+<text y="135">c</text>
+<text y="345">c</text>
+<text y="429">c</text>
+<text y="471">c</text>
+<text y="513">c</text> 
+<text y="681">c</text>
+<text y="723">c</text>
+<text y="765">c</text>
+<text y="807">c</text>
+<text y="849">c</text>
+<text y="933">c</text> 
+</g>
+
+<g transform="translate(50,-3)" fill="black" font-size="35">
+<text y="219">g</text>
+<text y="345">g</text>
+<text y="387">g</text>
+<text y="555">g</text>
+<text y="597">g</text>
+<text y="639">g</text>
+<text y="681">g</text>
+<text y="723">g</text>
+<text y="807">g</text>
+<text y="849">g</text>
+<text y="933">g</text> 
+</g>
+
+<g transform="translate(75,-3)" fill="black" font-size="35">
+<text y="177">o</text>
+<text y="261">o</text>
+<text y="303">o</text>
+<text y="345">o</text>
+<text y="387">o</text>
+<text y="555">o</text>
+<text y="639">o</text>
+<text y="723">o</text>
+<text y="849">o</text>
+<text y="891">o</text>
+<text y="933">o</text> 
+</g>
+
+<g transform="translate(110,-3)" fill="white" font-size="35" text-anchor="start">
+<text y="135">Turkey</text>
+<text y="177">Nigeria</text>
+<text y="219">Egypt</text>
+<text y="261">Mexico</text>
+<text y="303">Brazil</text>
+<text y="345">China</text>
+<text y="387">Iran</text>
+<text y="429">South Africa</text>
+<text y="471">India</text>
+<text y="513">Germany</text> 
+<text y="555">Saudi Arabia</text>
+<text y="597">Argentina</text>
+<text y="639">Algeria</text>
+<text y="681">Australia</text>
+<text y="723">Canada</text>
+<text y="765">Colombia</text>
+<text y="807">Indonesia</text>
+<text y="849">US</text>
+<text y="891">Iraq</text>
+<text y="933" x="90" fill="#f44">Russia</text> 
+</g>
+
+<g transform="translate(0,975)" font-size="30">
+<text x="106">0%</text>
+<text x="406">50%</text>
+<text x="700">100%</text>
+</g>
+
+<g transform="translate(25,1015)" font-style="italic" text-anchor="start" font-size="30">
+<text>*</text>
+<text x="25">"c", "g", and "o" denote</text>
+<text x="30" y="30">top 11 coal, natural gas, and oil producers.</text></g>
+
+<!-- Cover edges' grid lines  -->
+<rect width="600" height="840" x="100" y="100" stroke="#888888" stroke-width="1" fill="none"/>
+
+</svg>
